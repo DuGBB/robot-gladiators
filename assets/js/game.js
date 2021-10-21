@@ -115,17 +115,17 @@ var enemyInfo = [
   {
     name: "Roborto",
     attack: randomNumber(10, 14),
-    health: randomNumber(40,60),
+    health: randomNumber(40, 60),
   },
   {
     name: "Amy Android",
     attack: randomNumber(10, 14),
-    health: randomNumber(40,60)
+    health: randomNumber(40, 60)
   },
   {
     name: "Robo Trumble",
     attack: randomNumber(10, 14),
-    health: randomNumber(40,60)
+    health: randomNumber(40, 60)
   }
 ];
 
@@ -138,8 +138,17 @@ var enemyReset = function() {
     }
 }
 
+var getPlayerName = function() {
+  var name = "";
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+ console.log("Your robot's name is " + name);
+ return name;
+}
+
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
